@@ -4,21 +4,24 @@ import axios from "axios";
 import _ from "lodash";
 
 const ALL_PALETTES = [
-  "resurrect-64",
-  "endesga-32",
-  "aap-64",
-  "pear36",
   "apollo",
-  "lospec500",
-  "endesga-64",
-  "journey",
-  "vinik24",
-  "sweetie-16",
-  "slso8",
-  "fantasy-24",
-  "zughy-32",
   "cc-29",
+  "endesga-32",
+  "endesga-64",
   "famicube",
+  "fantasy-24",
+  "journey",
+  "lospec500",
+  "lospec500",
+  "pear36",
+  "resurrect-64",
+  "slso8",
+  "slso8",
+  "sweetie-16",
+  "vinik24",
+  "vinik24",
+  "zughy-32",
+  "aap-64",
 ];
 
 const LOSPEC_BASE_URL = `https://lospec.com/palette-list`;
