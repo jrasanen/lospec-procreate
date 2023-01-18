@@ -5,11 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node source/index.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "The unlicense",
   "dependencies": {
     "axios": "^0.27.2",
     "lodash": "^4.17.21",
