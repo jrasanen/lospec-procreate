@@ -1,0 +1,33 @@
+name: release-flow
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm start
+      - name: Zip release
+        uses: vimtor/action-zip@v1
+        with:
+          files: output/
+          dest: swatches.zip
+      - name: Upload release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          asset_name: swatches.zip
+          tag: ${{ github.ref }}
+          overwrite: true
+          file_glob: true
